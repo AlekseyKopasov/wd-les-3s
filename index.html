@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <title>Лекция 3: CSS_1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+
+  <body class="shower full">
+    <header class="caption">
+      <h1>Веб-разработка</h1>
+      <p>Лекция 3: CSS_1</p>
+    </header>
+
+    <section class="slide clear">
+      <h2 class="shout shrink">Лекция 3</h2>
+    </section>
+
+    <section class="slide clear">
+      <h2 class="shout">CSS</h2>
+    </section>
+
+    <!-- TODO CSS: введение -->
+    <section class="slide">
+      <h2>Отличие CSS от HTML</h2>
+      <p><b>HTML</b> — структурирование содержимого страницы</p>
+      <p><b>CSS</b> — форматирование данного, уже структурированного, содержимого</p>
+    </section>
+    <section class="slide">
+      <h2>Преимущества CSS</h2>
+      <ul>
+        <li>возможность управления отображения множества документов одной таблицей</li>
+        <li>контроль над внешним видом страниц</li>
+        <li>возможность настраивать различное отображение</li>
+        <li>большое количество технических возможностей для дизайна</li>
+      </ul>
+    </section>
+    <section class="slide">
+      <h2>Внедрение CSS в HTML документ</h2>
+      <ol>
+        <li>С помощью тегов &lt;style&gt; &lt;/style&gt;</li>
+        <li>С помощью атрибута style=&quot; &quot;</li>
+        <li>С помощью тега &lt;link&gt;</li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Историческая справка</h2>
+      <ol>
+        <li><b>1967 год</b>: Вильям Тьюнниклифф обнародовал идею использовать языки разметки в компьютерной обработке текстов</li>
+        <li><b>1973 год</b>: Чарльз Голдфарб представляет язык GML</li>
+        <li><b>1986 год</b>: опубликован как международный стандарт язык SGML</li>
+        <li><b>1991 год</b>: создание HTML</li>
+        <li><b>1994 год</b>: Хокон Виум Ли (норв. Håkon Wium Lie) предложил концепцию каскадных таблиц стилей</li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Версии CSS</h2>
+      <ol>
+        <li><b>CSS 1</b> — 17 декабря 1996 года</li>
+        <li><b>CSS 2</b> — 12 мая 1998 года </li>
+        <li><b>CSS 2.1</b> — 8 сентября 2009 года </li>
+        <li><b>CSS 3</b> — находится в разработке с 1999 года</li>
+        <li>CSS 4 не будет <del>но есть 5, 6, 7, 8</del></li>
+      </ol>
+    </section>
+
+    <!-- TODO CSS: правила -->
+    <section class="slide">
+      <h2>Cascading Style Sheets (CSS) </h2>
+      <p><b>CSS (Каскадные Таблицы Стилей)</b> — это язык таблицы стилей. Он позволяет применять стили к элементам в документах HTML</p>
+      <pre>
+        <code>.my-element {</code>
+          <code>  font-size: 18px;</code>
+          <code>  line-height: 1.5;</code>
+          <code>  color: crimson;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <pre>
+        <code>.my-element {</code>
+          <code>  font-size: 18px;</code>
+          <code>  line-height: 1.5;</code>
+          <code>  color: crimson;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <pre>
+        <code class="mark">.my-element { // Селектор (Selector)</code>
+          <code>  font-size: 18px;</code>
+          <code>  line-height: 1.5;</code>
+          <code>  color: crimson;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide ">
+      <h2>CSS: правила</h2>
+      <pre>
+        <code>.my-element {</code>
+          <code class="mark">  font-size: 18px;  // Объявление (Declaration)</code>
+          <code>  line-height: 1.5;</code>
+          <code>  color: crimson;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <pre>
+        <code>.my-element {</code>
+          <code>  <mark>font-size</mark>: 18px;  // Свойство (Property) </code>
+          <code>  <mark>line-height</mark>: 1.5; // Свойство (Property) </code>
+          <code>  <mark>color</mark>: crimson; // Свойство (Property) </code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <pre>
+        <code>.my-element {</code>
+          <code>  font-size: <mark>18px</mark>;  // Значение свойства (Property value)</code>
+          <code>  line-height: <mark>1.5</mark>; // Значение свойства (Property value)</code>
+          <code>  color: <mark>crimson</mark>; // Значение свойства (Property value)</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <div class="columns two">
+        <pre>
+          <code>.my-element <mark class="important">{</mark></code>
+            <code>  font-size: 18px;</code>
+            <code>  line-height: 1.5;</code>
+            <code>  color: crimson;</code>
+          <code><mark class="important">}</mark></code>
+        </pre>
+        <ol>
+          <li>Набор правил должен быть обёрнут в фигурные скобки - <mark>{}</mark></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <div class="columns two">
+        <pre>
+          <code>.my-element {</code>
+            <code>  font-size <mark class="important">:</mark> 18px;</code>
+            <code>  line-height <mark class="important">:</mark> 1.5;</code>
+            <code>  color <mark class="important">:</mark> crimson;</code>
+          <code>}</code>
+        </pre>
+        <ol>
+          <li>Набор правил должен быть обёрнут в фигурные скобки - <mark>{}</mark></li>
+          <li>Cвойство от его значений отделяется двоеточием - <mark>:</mark></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>CSS: правила</h2>
+      <div class="columns two">
+        <pre>
+          <code>.my-element {</code>
+            <code>  font-size: 18px <mark class="important">;</mark></code>
+            <code>  line-height: 1.5 <mark class="important">;</mark></code>
+            <code>  color: crimson <mark class="important">;</mark></code>
+          <code>}</code>
+        </pre>
+        <ol>
+          <li>Набор правил должен быть обёрнут в фигурные скобки - <mark>{}</mark></li>
+          <li>Cвойство от его значений отделяется двоеточием - <mark>:</mark></li>
+          <li>Объвление заканчивается точкой с запятой - <mark>;</mark></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TODO CSS: селекторы -->
+    <section class="slide">
+      <h2>CSS: селекторы</h2>
+      <ol>
+        <li>Селектор элемента <b>(p)</b></li>
+        <li>ID селектор <b>(#my-id)</b></li>
+        <li>Селектор класса <b>(.my-class)</b></li>
+        <li>Селектор атрибута <b>(img[src])</b></li>
+        <li>Селектор псевдокласса <b>(a:hover)</b></li>
+      </ol>
+    </section>
+
+    <!-- TODO Псевдоклассы -->
+    <section class="slide">
+      <h2>Псевдоклассы</h2>
+      <p><b>Псевдокласс</b> — это селектор, который выбирает элементы, находящиеся в специфическом состоянии</p>
+      <pre><code>:pseudo-class-name</code></pre>
+    </section>
+
+    <!-- TODO Псевдоэлементы -->
+    <section class="slide">
+      <h2>Псевдоэлементы</h2>
+      <p><b>Псевдоэлемент</b> — это элементы, которых не существует в HTML-разметке. Они ведут себя сходным образом с псевоклассами, однако действуют так, как если бы вы добавили в разметку целый новый HTML-элемент, а не применили класс к существующим элементам</p>
+      <pre><code>::pseudo-element-name</code></pre>
+    </section>
+
+    <!-- TODO CSS: комбинирование и группировка -->
+    <section class="slide">
+      <h2>CSS селекторы: комбинирование и группировка</h2>
+      <ol>
+        <li><b>Группировка</b>: .element1, .element2</li>
+        <li><b>Объединение</b>: .class1.class2</li>
+        <li><b>Потомки</b>: .element1 .element2 </li>
+        <li><b>Непосредственно вложенные</b>: .element1 > .element2</li>
+        <li><b>Смежные</b>: .element1 + .element2</li>
+        <li><b>Последующие</b>: .element1 ~ .element2</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: группировка</h2>
+      <mark>Селекторы записываются через запятую</mark>
+      <div class="columns two justify-end">
+        <div>
+          <h3>До</h3>
+          <pre>
+            <code>.element1 { color: red; }</code>
+            <code>.element2 { color: red; }</code>
+            <code>.element3 { color: red; }</code>
+          </pre>
+        </div>
+        <div>
+          <h3>После</h3>
+          <pre>
+              <code>.element1,</code>
+              <code>.element2,</code>
+              <code>.element3 {</code>
+                <code>  color: red;</code>
+             <code>}</code>
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: объединение</h2>
+      <mark>Селекторы записываются слитно</mark>
+      <pre>
+        <code>.class1<mark class="ignore">.</mark>class2 {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: потомки</h2>
+      <mark>Селекторы записываются последовательно через пробел</mark>
+      <pre>
+        <code>.block h2 {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: непосредственно вложенные</h2>
+      <mark>Селекторы разделяются знаком <b>></b></mark>
+      <pre>
+        <code>.block > h2 {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: cмежные</h2>
+      <mark>Селекторы разделяются знаком <b>+</b></mark>
+      <pre>
+        <code>.block1 + .block2 {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>CSS селекторы: последующие</h2>
+      <mark>Селекторы разделяются знаком <b>~</b></mark>
+      <pre>
+        <code>.block1:hover ~ .block2 {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <!-- TODO Как работает CSS? -->
+    <section class="slide">
+      <h2>Как работает CSS?</h2>
+      <figure>
+        <img src="img/browser_simple_rendering_pipeline__ru.png" width="100%" height="100%" alt="" style="
+        max-height: 370px;
+        margin: 0 auto;
+        display: flex;
+        object-fit: contain;
+      ">
+        <cite class="small" ><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/First_steps/How_CSS_works" target="_blank">developer.mozilla.org</a></cite>
+      </figure>
+    </section>
+
+    <!-- TODO CSS: специфичность, наследование, каскад -->
+    <section class="slide">
+      <h2>CSS: специфичность, наследование, каскад</h2>
+
+      <p><b>Каскад</b> — к одному и тому же элементу может применяться несколько CSS-правил (наборов CSS-свойств). Каскадирование определяет, какие именно свойства из всех возможных источников будут применены к элементу.</p>
+    </section>
+
+    <section class="slide">
+      <h2>Порядок примениения CSS-свойств</h2>
+
+      <ol>
+        <li>важность</li>
+        <li>специфичность</li>
+        <li>порядок исходного кода</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Специфичность</h2>
+      <img src="img/specif.png" width="100%" alt="">
+      <cite class="small" ><a href="https://webformyself.com/koncepcii-css-edinoe-rukovodstvo/" target="_blank">WebforMyself.com</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Специфичность</h2>
+      <span><a href="https://polypane.app/css-specificity-calculator/" target="_blank">Specificity calculator</a> - онлайн калькулятор подсчета специфичности</span>
+    </section>
+
+    <section class="slide">
+      <h2>Специфичность</h2>
+      <p><mark class="important">!important</mark> — нарушает естественную работу специфичности и каскада</p>
+      <pre>
+        <code>.elem {</code>
+          <code>  color: red;</code>
+        <code>}</code>
+
+        <code>p {</code>
+          <code>  color: rebeccapurple <mark>!important;</mark></code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Наследование</h2>
+      <p><b>Наследование</b> — механизм, с помощью которого значения свойств элемента-родителя передаются его элементам-потомкам</p>
+      <pre>
+        <code>&lt;html&gt;</code>
+          <code>  &lt;head&gt;&lt;/head&gt;</code>
+          <code>  &lt;body&gt;</code>
+            <code>    &lt;p class=&quot;text&quot;&gt;Выделенная &lt;span&gt;подстрока&lt;/span&gt;&lt;/p&gt;</code>
+          <code>  &lt;/body&gt;</code>
+        <code>&lt;/html&gt;</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Наследование</h2>
+
+      <div class="columns two">
+        <div>
+          <h3>Наследуемые</h3>
+          <ol>
+            <li>font-size</li>
+            <li>font-family</li>
+            <li>font-style</li>
+            <li>color</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Ненаследуемые</h3>
+          <ol>
+            <li>background</li>
+            <li>border</li>
+            <li>padding</li>
+            <li>margin</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- TODO CSS: Custom property -->
+    <section class="slide">
+      <h2>Custom property</h2>
+
+      <p><b><mark>Custom property</mark></b> — CSS переменные (пользовательские CSS-свойства)</p>
+      <div class="columns two justify-end">
+        <div>
+          <p>Объявление:</p>
+          <pre>
+            <code>element {</code>
+              <code>  --main-bg-color: black;</code>
+            <code>}</code>
+          </pre>
+        </div>
+        <div>
+          <p>Использование</p>
+          <pre>
+            <code>.element {</code>
+              <code>  background-color: var(--main-bg-color);</code>
+            <code>}</code>
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Функции</h2>
+      <ol>
+        <li><b>url()</b> — для загрузки ресурсов</li>
+        <li><b>attr()</b> — позволяет брать содержимое атрибута</li>
+        <li><b>min()</b> — возвращает минимальное значение из указанных</li>
+        <li><b>calc()</b> — позволяет производить математические вычисления</li>
+        <li><b>linear-gradient()</b> — для задания фона в виде линейного градиента</li>
+        <li><b>var()</b> — для использования кастомных свойств</li>
+      </ol>
+    </section>
+
+    <!-- TODO Боксовая модель -->
+    <section class="slide">
+      <h2>Боксовая модель</h2>
+      <img src="img/box-model.png" width="100%" height="100%" alt="" style="max-width: 50%;height: auto;">
+      <cite class="small"><a href="https://doka.guide/css/box-model/" target="_blank">doka.guide</a></cite>
+    </section>
+
+    <section class="slide">
+      <h2>Типы боксов</h2>
+      <ol>
+        <li><b>блочные</b> — display: block</li>
+        <li><b>строчные</b> — display: inline</li>
+        <li><b>блочно-строчные</b> — display: inline-block</li>
+        <li><b>гибкие или флексовые (флексы)</b> — display: flex</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Блочный бокс</h2>
+      <p>
+        <mark>div</mark>
+        <mark>header</mark>
+        <mark>footer</mark>
+        <mark>section</mark>
+        <mark>h1...h6</mark>
+        <mark>p</mark>
+      </p>
+      <pre>
+        <code>.element {</code>
+          <code>  display: block;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Строчный  бокс</h2>
+      <p>
+        <mark>a</mark>
+        <mark>span</mark>
+        <mark>button</mark>
+        <mark>strong</mark>
+        <mark>em</mark>
+        <mark>b</mark>
+      </p>
+      <pre>
+        <code>.element {</code>
+          <code>  display: inline;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Блочно-строчный бокс</h2>
+      <p><b>Блочно-строчные</b> боксы сочетают в себе особенности и блочных и строчных боксов. </p>
+      <pre>
+        <code>.element {</code>
+          <code>  display: inline-block;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс</h2>
+      <p><b>Флексы</b> — основной инструмент построения крупных сеток и микросеток</p>
+      <pre>
+        <code>.element {</code>
+          <code>  display: flex;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <!-- TODO Изменение размеров в CSS -->
+    <section class="slide">
+      <h2>Изменение размеров в CSS</h2>
+      <ol>
+        <li>Размер по умолчанию</li>
+        <li>Присваивание размера</li>
+        <li>Проценты</li>
+        <li>Минимальные и максимальные размеры</li>
+        <li>Единицы вьюпорта</li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Viewport</h2>
+      <p><b>Вьюпо́рт</b> — это видимая область вашей страницы в браузере</p>
+    </section>
+
+    <!-- TODO Отладка CSS -->
+    <section class="slide">
+      <h2>Отладка CSS</h2>
+      <p>C тем, что происходит помогут разобраться DevTools (инструменты разработчика) </p>
+      <p>Как открыть:</p>
+      <ol>
+        <li><b>Ctrl + Shift + I</b>: все, кроме IE</li>
+        <li><b>F12</b></li>
+        <li><b>⌘ + ⌥ + I</b>: Mac OS X</li>
+      </ol>
+
+
+    </section>
+
+    <!-- TODO Flexible Box Layout -->
+    <section class="slide">
+      <h2 class="shout">Flexible Box Layout</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Flexible Box Layout</h2>
+      <pre>
+        <code>.element {</code>
+          <code>  display: flex;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <img src="img/flexbox-1.png" width="100%" height="100%" alt="" style="max-width: 100%;height: auto;">
+      <cite class="small"><a href="https://htmlacademy.ru/courses/96/run/31#:~:text=%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BE%D1%81%D1%8C%D1%8E%20flex%2D%D0%BA%D0%BE%D0%BD%D1%82%D0%B5%D0%B9%D0%BD%D0%B5%D1%80%D0%B0%20%D1%8F%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F,%D0%BE%D1%81%D0%B8%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%82%20%C2%AB%D0%B2%D0%B5%D1%80%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%C2%BB%20%D0%B2%D1%8B%D1%80%D0%B0%D0%B2%D0%BD%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F." target="_blank">htmlacademy.ru</a></сite>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p>Cвойство <b>justify-content</b> распределяет элементы относительно главной оси</p>
+      <ul>
+        <li><b>flex-start</b> — элементы стоят в начале оси</li>
+        <li><b>flex-end</b> — элементы стоят в конце оси</li>
+        <li><b>center</b> — элементы по центру оси</li>
+        <li><b>space-between</b> — первый элемент располагается в начале, а последний — в конце. Между крайними элементами и флекс-контейнером отступа нет</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p>Элементы равномерно распределены вдоль главной оси</p>
+      <ul>
+
+        <li><b>space-around</b> — расстояние между крайними элементами и флекс-контейнером равно половине отступа между соседними флекс-элементами</li>
+        <li><b>space-evenly</b> — отступы между соседними элементами и краями флекс-контейнера равны</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p>Cвойство <b>align-items</b> распределяет элементы относительно поперечной оси</p>
+      <ol>
+        <li><b>stretch</b> — элементы растягиваются вдоль всей оси (по умолчанию)</li>
+        <li><b>flex-start</b> — элементы идут в начале оси</li>
+        <li><b>flex-end</b> — элементы идут в конце оси</li>
+        <li><b>center</b> — элементы в центре оси</li>
+        <li><b>baseline</b> — элементы размещены по базовой линии</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p><b>baseline</b> — невидимая линия, которая проходит по нижней части букв</p>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p><b>align-self</b> — выравнивает <mark>отдельный</mark> элемент относительно поперечной оси</p>
+      <p>Значения <b>align-self</b> такие же, как у <b>align-items</b></p>
+    </section>
+
+    <section class="slide">
+      <h2>Флексбокс: главная и поперечные оси</h2>
+      <p>
+        <b>align-content</b> — выравнивает ряды элементов вдоль поперечной оси.</p>
+
+      <div class="columns two">
+        <div>
+          <ol>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>space-between</li>
+            <li>space-around</li>
+            <li>space-evenly</li>
+          </ol>
+        </div>
+        <div>
+          <ol>
+            <li>stretch</li>
+            <li>baseline</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Отличие align-content от align-items</h2>
+
+      <ul>
+        <li><b>align-items</b> выравнивает элементы внутри флекс-контейнера</li>
+        <li><b>align-content</b> выравнивает ряды</li>
+      </ul>
+
+      <p>Когда <b>align-content</b> задано другое значение (не stretch), оно перекрывает значения <b>align-items</b> и <b>align-self</b></p>
+    </section>
+
+    <section class="slide">
+      <h2>flex-wrap</h2>
+      <pre>
+        <code>.class {</code>
+          <code>  display: flex;</code>
+          <code class="mark">  flex-wrap: wrap;</code>
+          <code>  align-content: flex-end;</code>
+          <code>  align-items: flex-start;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>flex-grow</h2>
+      <p><b>flex-grow</b> определяет, как элементы будут растягиваться внутри контейнера, когда есть свободное пространство</p>
+      <pre>
+        <code>.element-1 {</code>
+          <code class="mark">  flex-grow: 0;</code>
+       <code>}</code>
+        <code>.element-2 {</code>
+          <code class="mark">  flex-grow: 1;</code>
+       <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>flex-shrink</h2>
+      <p><b>flex-shrink</b> отвечает за гибкость и сжатие элементов, когда доступное пространство ограничено</p>
+      <pre>
+        <code>.element-1 {</code>
+          <code class="mark">  flex-shrink: 0;</code>
+       <code>}</code>
+        <code>.element-2 {</code>
+          <code class="mark">  flex-shrink: 1;</code>
+       <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>flex-basis </h2>
+      <p><b>flex-basis </b> задает начальный размер элемента перед распределением доступного пространства</p>
+
+      <div class="columns three">
+        <pre>
+          <code>.element-1 {</code>
+            <code>  height: 300px;</code>
+            <code>  width: 300px;</code>
+            <code>  <mark>flex-basis: 500px;</mark></code>
+          <code>}</code>
+        </pre>
+        <pre>
+          <code>.element-2 {</code>
+            <code>  height: 300px;</code>
+            <code>  width: 300px;</code>
+          <code>}</code>
+        </pre>
+        <pre>
+          <code>.element-3 {</code>
+            <code>  height: 300px;</code>
+            <code>  width: 300px;</code>
+          <code>}</code>
+        </pre>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>order</h2>
+      <p><b>order</b> определяет порядок отображения элементов в контейнере</p>
+      <pre>
+        <code>.element-1 {</code>
+          <code class="mark">  order: 2;</code>
+        <code>}</code>
+        <code>.element-2 {</code>
+          <code class="mark">  order: 1;</code>
+        <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Flexbox</h2>
+
+      <p>Свойство <b>flex</b> работает только для элементов, у которых значение свойства <b>display</b> установлено на <b>flex</b></p>
+
+      <pre>
+        <code>.element {</code>
+          <code class="mark">  display: flex;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Flexbox</h2>
+
+      <p>Если элементы не помещаются в одну строку или колонку из-за ограничений ширины или высоты контейнера, используется свойство <b>flex-wrap</b> со значением <b>wrap</b></p>
+
+      <pre>
+        <code>.element {</code>
+          <code>  display: flex;</code>
+          <code class="mark">  flex-wrap: wrap;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Flexbox</h2>
+
+      <p>Расположение элементов в HTML-файле не имеет решающего значения</p>
+
+      <pre>
+        <code>.element {</code>
+          <code>  display: flex;</code>
+          <code class="mark">  order: 2;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Flexbox</h2>
+
+      <p>Во флексах есть понятие <b>начала (start)</b> и <b>конца (end)</b>, поэтому в браузерах с локалью <b>rtl (right-to-left)</b> все элементы будут автоматически расположены в реверсном порядке</p>
+    </section>
+
+    <section class="slide">
+      <h2>Где практиковаться</h2>
+      <ol>
+        <li><b><a href="https://flexboxfroggy.com/#ru" target="_blank">Flexbox froggy (ru)</a></b> — с помощью флексов нужно размещать лягушат на кувшинках</li>
+        <li><b><a href="http://www.flexboxdefense.com/" target="_blank">Flexbox Defense (en)</a></b> — игра в стиле Tower Defense</li>
+      </ol>
+    </section>
+
+    <section class="slide clear">
+      <h2>Практика</h2>
+
+      <ol>
+        <li>Выделить шапку, основной контент и подвал</li>
+        <li>Добавить сетку для элементов в шапке </li>
+        <li>Добавить сетку для элементов в подвале </li>
+        <li>Добавить сетку для элементов в основном контенте </li>
+      </ol>
+    </section>
+
+    <!-- TODO Grid Layout -->
+    <section class="slide clear">
+      <h2 class="shout">Grid Layout</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Гриды</h2>
+      <p><b>CSS Grid Layout</b> или просто <b>гриды</b> — это технология для раскладки элементов на веб-страницах.</p>
+      <p>Гриды дают возможность работать одновременно с двумя измерениями: горизонталью и вертикалью</p>
+      <pre>
+        <code>.element {</code>
+          <code class="mark">  display: grid;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Гриды</h2>
+      <ol>
+        <li><b>Грид-контейнер</b> — родительский элемент, к которому применяется свойство <mark>display: grid</mark></li>
+        <li><b>Грид-элемент</b> — дочерний элемент, прямой потомок грид-контейнера</li>
+        <li><b>Грид-линия</b> — разделительная линия, формирующая структуру грида. Может быть как вертикальной (грид-линия колонки), так и горизонтальной (грид-линия ряда). Располагается по обе стороны от колонки или ряда</li>
+      </ol>
+    </section>
+
+    <section class="slide black">
+      <h2>Грид-линия</h2>
+      <img src="img/grid-container.png" width="100%" height="100%" alt="" style="max-width: 100%;height: auto;">
+    </section>
+
+    <section class="slide black">
+      <h2>Грид-ячейка</h2>
+      <img src="img/grid-cell.png" width="100%" height="100%" alt="" style="max-width: 100%;height: auto;">
+    </section>
+
+    <section class="slide black">
+      <h2>Грид-полоса</h2>
+      <img src="img/grid-line.png" width="100%" height="100%" alt="" style="max-width: 100%;height: auto;">
+    </section>
+
+    <section class="slide black">
+      <h2>Грид-область</h2>
+      <img src="img/grid-area.png" width="100%" height="100%" alt="" style="max-width: 100%;height: auto;">
+    </section>
+
+    <section class="slide">
+      <h2>Свойства грид-контейнера</h2>
+      <ul>
+        <li>grid-template-columns</li>
+        <li>grid-template-rows</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>grid-template-columns</h2>
+
+      <p>Будет создано 3 колонки</p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code class="mark">  grid-template-columns: 100px auto 30%;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>grid-template-rows</h2>
+      <p>Будет создано 3 ряда</p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code class="mark">  grid-template-rows: 200px 15vw 10rem;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>repeat()</h2>
+      <p>Если нужны одинаковые колонки или ряды, то можно воспользоваться функцией <b>repeat()</b></p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code class="mark">  grid-template-columns: repeat(3, 1fr);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>fr</h2>
+      <p><b>fr</b> (fraction) — новая единица измерения. Отвечает за свободное пространство внутри грид-контейнера</p>
+      <code class="mark">  grid-template-columns: repeat(3, 1fr);</code>
+      <p>то же самое что и</p>
+      <code class="mark">  grid-template-columns: 1fr 1fr 1fr;</code>
+    </section>
+
+    <section class="slide">
+      <h2>auto-fill и auto-fit</h2>
+      <p>В тех случаях, когда количество колонок или строк не известно можно установить значения <b>auto-fill</b> или <b>auto-fit</b></p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code class="mark">  grid-template-rows: repeat(auto-fill, 100px);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>auto-fill</h2>
+      <p><b>auto-fill</b> стремится заполнить колонками всё доступное пространство, а когда элементы заканчиваются, создаёт пустые колонки, равномерно распределяя доступную область между существующими и «виртуальными» колонками</p>
+    </section>
+
+    <section class="slide">
+      <h2>auto-fit</h2>
+      <p><b>auto-fit</b> схлопывает пустые колонки и отдаёт больше места под заполненные</p>
+    </section>
+
+    <section class="slide">
+      <h2>grid-auto-columns, grid-auto-rows</h2>
+      <p>Если элементов внутри грид-контейнера больше, чем может поместиться в заданные явно ряды и колонки, то их колонки и ряды можно создавать автоматически</p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code>  grid-template-rows: 100px 200px;</code>
+          <code class="mark">  grid-auto-rows: 50px;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>grid-auto-flow</h2>
+      <p><b>grid-auto-flow</b> указывает как размещать новые элементы внутри родителя</p>
+
+      <pre>
+        <code>.container {</code>
+          <code>  display: grid;</code>
+          <code>  grid-template-columns: 50px 100px 200px;</code>
+          <code>  grid-auto-columns: 50px 75px 100px;</code>
+          <code class="mark">  grid-auto-flow: columns;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>grid-auto-flow</h2>
+
+      <ol>
+        <li><b>row</b> — автоматически размещаемые элементы выстраиваются в ряды (значение по умолчанию)</li>
+        <li><b>column</b> — автоматически размещаемые элементы выстраиваются в колонки</li>
+        <li><b>dense</b> — браузер старается заполнить пустые ячейки в разметке, если размеры элементов позволяют. Можно сочетать с остальными значениями</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>grid-template-areas</h2>
+
+      <ol>
+        <li><b>none</b> — имя не задано</li>
+        <li><b>•</b> — пустая ячейка</li>
+        <li><b>название</b> — название области</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>grid-template-areas</h2>
+
+      <pre>
+        <code> .container {</code>
+          <code>  ...</code>
+          <code>  grid-template-areas:</code>
+            <code>    "header header header"</code>
+            <code>    "content content content"</code>
+            <code>    "content content ."</code>
+            <code>    "footer footer footer";</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>grid-template</h2>
+      <p>Свойство-шорткат для свойств <b>grid-template-rows</b>, <b>grid-template-columns</b></p>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code class="mark">  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>row-gap, column-gap</h2>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code>  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code class="mark">  row-gap: 20px; // расстояние между рядами</code>
+        <code class="mark">  column-gap: 30px; // расстояние между колонками</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>gap</h2>
+      <p>Свойство-шорткат для свойств <b>row-gap</b>, <b>column-gap</b></p>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code>  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code class="mark">  gap: 20px 30px; // расстояние между рядами/колонками</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>grid</h2>
+      <p>Шорткат, позволяющий задать значения всему и сразу</p>
+      <ul>
+        <li>grid-template-rows</li>
+        <li>grid-template-columns</li>
+        <li>grid-template-areas</li>
+        <li>grid-auto-rows</li>
+        <li>grid-auto-columns</li>
+        <li>grid-auto-flow</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>grid</h2>
+
+      <pre>
+        <code>.container {</code>
+          <code>  grid:</code>
+            <code>    [row1-start] "header header header" 1fr [row1-end]</code>
+            <code>    [row2-start] "footer footer footer" 100px [row2-end]</code>
+            <code>    / auto 10px auto;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>justify-content</h2>
+      <p>Выравнивает элементы вдоль оси строки</p>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code>  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code class="mark">  justify-content: end;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>justify-content</h2>
+      <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch</li>
+        <li>space-around</li>
+        <li>space-evenly</li>
+        <li>space-between</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>justify-items</h2>
+      <p>Выравнивает элементы вдоль горизонтальной оси</p>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code>  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code class="mark">  justify-items: end;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>justify-items</h2>
+      <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>justify-self</h2>
+      <p>Выравнивает отдельные грид-элементы</p>
+
+      <pre>
+        <code>.container {</code>
+        <code>  display: grid;</code>
+        <code>  grid-template: repeat(2, 1fr) / repeat(3, 100px);</code>
+        <code class="mark">  align-self: start;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>align-items</h2>
+      <p>Выравнивает элементы по вертикальной оси внутри грид-контейнера</p>
+      <ul>
+        <li>start</li>
+        <li>end</li>
+        <li>center</li>
+        <li>stretch</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>align-self</h2>
+      <p>Выравнивает отдельные грид-элементы</p>
+    </section>
+
+    <section class="slide">
+      <h2>Расположение элемента внутри грид-сетки</h2>
+      <ol>
+        <li>grid-column-start</li>
+        <li>grid-column-end</li>
+        <li>grid-row-start</li>
+        <li>grid-row-end</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Расположение элемента внутри грид-сетки</h2>
+      <ol>
+        <li><b>название или номер линии</b> — порядковый номер или название конкретной линии</li>
+        <li><b>span [число]</b> — элемент растянется на указанное количество ячеек</li>
+        <li><b>span [имя]</b> — элемент будет растягиваться до следующей указанной линии</li>
+        <li><b>auto </b> — автоматическое растягивание элемента</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Расположение элемента внутри грид-сетки</h2>
+      <pre>
+        <code>.container {</code>
+          <code>  grid:</code>
+            <code>    grid-template-columns: <mark>[one]</mark> 1fr <mark>[two]</mark> 1fr <mark>[three]</mark> 1fr;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>.element {</code>
+          <code>  grid-column-start: <mark>1</mark>;</code>
+          <code>  grid-column-end: span <mark>two</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>column-start/*-end, row-start/*-end</h2>
+      <p>Шорткаты для <b>grid-column-start/*-end, grid-row-start/*-end</b></p>
+      <pre>
+        <code>.container {</code>
+          <code>  grid:</code>
+            <code>    grid-template-columns: 1fr 1fr 1fr;</code>
+        <code>}</code>
+      </pre>
+      <pre>
+        <code>.element {</code>
+          <code>  grid-column: <mark>1 / span 2</mark>;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Выравнивание отдельных элементов</h2>
+
+      <ul>
+        <li><b>justify-self</b> — горизонтальное выравнивание для отдельного элемента</li>
+        <li><b>align-self</b> — вертикальное выравнивание для отдельного элемента</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Функции и ключевые слова</h2>
+
+      <ol>
+        <li><b>px, vw, rem, % и т.д</b></li>
+        <li><b>min-content</b> — размер определяется по самому наименьшему элементу</li>
+        <li><b>max-content</b> — размер определяется по самому большому элементу</li>
+        <li><b>minmax(min, max)</b> — определяет диапазон размеров элемента</li>
+        <li><b>fr</b> — доля (fraction) доступного пространства в грид-контейнере</li>
+        <li><b>auto</b> — диапазон между минимумом и максимумом. В большинстве случаев это то же самое, что и minmax(min-content,max-content)</li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h2>Анимация свойств</h2>
+      <p>Для анимации доступны следующие свойства:</p>
+
+      <ol>
+        <li>gap, row-gap, column-gap</li>
+        <li>grid-template-columns, grid-template-rows</li>
+      </ol>
+    </section>
+
+    <!-- TODO Flex Layout vs Grid Layout -->
+    <section class="slide clear">
+      <h2 class="shout">Flex vs Grid</h2>
+    </section>
+
+
+    <section class="slide">
+      <h2>Flexbox Layout vs Grid Layout</h2>
+
+      <ol>
+        <li><b>Флексы</b> — одномерные</li>
+        <li><b>Гриды</b> — двухмерные</li>
+      </ol>
+
+      <blockquote>
+        <p>Гриды в основном используются для построения сетки всего интерфейса. Флексы же — для расположения элементов внутри сетки.</p>
+    </blockquote>
+    </section>
+
+
+    <section class="slide">
+      <h2>Практика</h2>
+      <ol>
+        <li>Выделить в макете крупные сетки с помощью флексов</li>
+        <li>Выделить в макете мелкие сетки компонентов с помощью флексов</li>
+        <li>Выделить в макете грид-контейнеры</li>
+      </ol>
+    </section>
+
+    <!-- TODO Материалы и ссылки -->
+
+    <section class="slide">
+      <h2>Материалы и ссылки ч.1/5</h2>
+      <ol>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Learn/Getting_started_with_the_web/CSS_basics" target="_blank">Основы CSS</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance" target="_blank">CSS: наследование, каскад, специфичность</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders" target="_blank">CSS фоны</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS-переменные</a>
+        </li>
+        <li>
+          <a href="https://www.w3.org/TR/CSS21/propidx.html" target="_blank">Спецификация CSS (все свойства)</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Learn/CSS/Styling_text/Fundamentals" target="_blank">Стилизация текста в CSS</a>
+        </li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.2/5</h2>
+      <ol>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox" target="_blank">Flexible Box Layout</a>
+        </li>
+        <li>
+          <a href="https://doka.guide/css/combined-selectors/" target="_blank">Комбинированные селекторы</a>
+        </li>
+        <li>
+          <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">A Complete Guide to Flexbox</a>
+        </li>
+        <li>
+          <a href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model" target="_blank">Боксовая модель</a>
+        </li>
+        <li>
+          <a href="https://htmlacademy.ru/blog/css/display-in-css" target="_blank">Зачем нужно свойство display в CSS</a>
+        </li>
+        <li>
+          <a href="https://doka.guide/css/specificity/" target="_blank">Специфичность</a>
+        </li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.3/5</h2>
+      <ol>
+        <li>
+          <a href="https://polypane.app/css-specificity-calculator/" target="_blank">Specificity calculator</a>
+        </li>
+        <li>
+          <a href="https://flexboxfroggy.com/#ru" target="_blank">Flexbox froggy</a>
+        </li>
+        <li>
+          <a href="http://www.flexboxdefense.com/" target="_blank">Flexbox Defense</a>
+        </li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.4/5</h2>
+      <ol>
+        <li>
+          <a href="https://www.smashingmagazine.com/2018/08/flexbox-display-flex-container/" target="_blank">Статья про флексы от Рейчел Эндрю в Smashing Magazine (1)</a>
+        </li>
+        <li>
+          <a href="https://www.smashingmagazine.com/2018/08/flexbox-alignment/" target="_blank">Статья про флексы от Рейчел Эндрю в Smashing Magazine (2)</a>
+        </li>
+        <li>
+          <a href="https://www.smashingmagazine.com/2018/09/flexbox-sizing-flexible-box/" target="_blank">Статья про флексы от Рейчел Эндрю в Smashing Magazine (3)</a>
+        </li>
+      </ol>
+    </section>
+    <section class="slide">
+      <h2>Материалы и ссылки ч.5/5</h2>
+      <ol>
+        <li>
+          <a href="https://doka.guide/css/grid-guide/" target="_blank">Что такое гриды</a>
+        </li>
+        <li>
+          <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">A Complete Guide to Grid</a>
+        </li>
+        <li>
+          <a href="https://yoksel.github.io/grid-cheatsheet/" target="_blank">Grid Cheatsheet</a>
+        </li>
+        <li>
+          <a href="https://cssgridgarden.com/#ru" target="_blank">Grid Garden</a>
+        </li>
+        <li>
+          <a href="https://grid.malven.co/" target="_blank">GRID cheat sheet</a>
+        </li>
+        <li>
+          <a href="https://learncssgrid.com/" target="_blank">Learning CSS Grid</a>
+        </li>
+        <li>
+          <a href="https://codepen.io/matuzo/post/animating-css-grid-layout-properties" target="_blank">Animating CSS Grid Layout properties</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- TODO: вопросы для тестирования -->
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Для чего нужен CSS?</b></p>
+      <ol style="font-size: 18px;">
+        <li>Для добавления функциональности к странице</li>
+        <li>Для работы со стилями на страницах сайта</li>
+        <li>Для создания разметки на странице
+        </li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>Для работы со стилями на страницах сайта</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Где правильно прописан селектор для тега по id?</b></p>
+      <p style="font-size: 18px;"><mark>&lt;div id=&quot;my-id&quot;&gt;Text&lt;/div&gt;</mark></p>
+      <ol style="font-size: 18px;">
+        <li>* {}</li>
+        <li>#my-id {}</li>
+        <li>.my-id {}</li>
+        <li>div.my-id {}</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>#my-id {}</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Как много стилей можно добавить к одному объекту?</b></p>
+      <ol style="font-size: 18px;">
+        <li>Не более 10</li>
+        <li>Не более 20</li>
+        <li>Не более 50</li>
+        <li>Неограниченное количество</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>Неограниченное количество</b></p>
+      </details>
+    </section>
+
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>CSS означает:</b></p>
+      <ol style="font-size: 18px;">
+        <li>Common Style Sheets (Общие таблицы стилей)</li>
+        <li>Control Style Sheets (Таблицы стилей управления)</li>
+        <li>Central Style Sheets (Центральные таблицы стилей)</li>
+        <li>Cascading Style Sheets (Каскадные таблицы стилей)</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>Cascading Style Sheets (Каскадные таблицы стилей)</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Какое из следующих свойств определяет отступ справа внутри элемента?</b></p>
+      <ol style="font-size: 18px;">
+        <li>padding-top</li>
+        <li>margin-right</li>
+        <li>padding-right</li>
+        <li>padding-bottom</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>padding-right</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Какое из следующих свойств определяет верхний отступ снаружи элемента?</b></p>
+      <ol style="font-size: 18px;">
+        <li>margin-top</li>
+        <li>padding-top</li>
+        <li>padding-bottom</li>
+        <li>margin-bottom</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>margin-top</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Как в CSS выбрать элемент с class = "elem"?</b></p>
+      <ol style="font-size: 18px;">
+        <li>*elem</li>
+        <li>#elem</li>
+        <li>.elem</li>
+        <li>elem</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>.elem</b></p>
+      </details>
+    </section>
+    <section class="slide">
+      <h2>Вопросы</h2>
+      <p style="font-size: 18px;"><b>Как выбрать все элементы <mark>&lt;p&gt;</mark> внутри элемента <mark>&lt;div&gt;</mark> ?</b></p>
+      <ol style="font-size: 18px;">
+        <li>div.p</li>
+        <li>div p</li>
+        <li>div > p</li>
+        <li>div + p</li>
+      </ol>
+      <details style="font-size: 18px;">
+        <summary>Ответ</summary>
+          <p><b>div p</b></p>
+      </details>
+    </section>
+
+    <section class="slide clear">
+      <div class="columns two">
+        <div class="center-block">
+          <h2>Слайды</h2>
+          <img src="img/slides.png" width="200" height="200" alt="Ссылка на Слайды">
+        </div>
+        <div class="center-block">
+          <h2>Яндекс Диск</h2>
+          <img src="img/disk.png" width="200" height="200" alt="Ссылка на Яндекс Диск">
+        </div>
+      </div>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/shower.js"></script>
+    <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
+
+  </body>
+
+</html>
